@@ -14,8 +14,8 @@ The application is structured around several key DocTypes representing core busi
 *   **MS Department:** Manages department information within a specific company. Tracks department name, associated company, and aggregates data like the number of employees and projects within the department.
 *   **MS Employee:** Manages employee records. Includes personal details (name, email, mobile, address), employment information (company, department, title, hire date), and tracks assigned projects.
 *   **MS Project:** Manages project details. Includes project name, associated company and department, description, start/end dates, and allows assignment of multiple employees to the project via the `Employee Project` child table.
-*   **Performance Review:** Manages employee performance reviews (details to be further documented based on its specific implementation).
-*   **User Account:** Manages user accounts linked to employees (details to be further documented based on its specific implementation).
+*   **Performance Review:** Manages employee performance reviews.
+*   **User Account:** Manages user accounts linked to employees.
 *   **Employee Project:** A child DocType linking Employees to Projects, enabling many-to-many relationships.
 
 ### Implementation Considerations
