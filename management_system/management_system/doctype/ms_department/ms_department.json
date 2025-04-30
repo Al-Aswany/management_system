@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {company}-{department_name}",
+ "creation": "2025-04-30 14:35:06.861996",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "department_name",
+  "number_of_employees",
+  "number_of_projects"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "MS Company",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Department Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "number_of_employees",
+   "fieldtype": "Int",
+   "label": "Number of Employees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_projects",
+   "fieldtype": "Int",
+   "label": " Number of Projects",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-30 14:35:06.861996",
+ "modified_by": "Administrator",
+ "module": "Management System",
+ "name": "MS Department",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

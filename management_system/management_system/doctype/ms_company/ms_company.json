@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company_name",
+ "creation": "2025-04-30 14:30:43.630293",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company_name",
+  "number_of_departments",
+  "number_of_employees",
+  "number_of_projects"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "number_of_departments",
+   "fieldtype": "Int",
+   "label": "Number of Departments",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_employees",
+   "fieldtype": "Int",
+   "label": "Number of Employees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_projects",
+   "fieldtype": "Int",
+   "label": " Number of Projects",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-30 14:30:43.630293",
+ "modified_by": "Administrator",
+ "module": "Management System",
+ "name": "MS Company",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
