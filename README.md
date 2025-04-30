@@ -1,4 +1,4 @@
-"""# Management System
+# Management System
 
 This repository contains a comprehensive Company Management System application built using the Frappe Framework.
 
