@@ -21,7 +21,7 @@ frappe.ui.form.on('MS Project', {
 			frm.set_query('assigned_employees', function() {
 				return {
 					filters: {
-						'employee_status':"Hired",
+						'hired': 1,
 						'department':frm.doc.department
 					}
 				};
