@@ -4,7 +4,7 @@ This repository contains a comprehensive Company Management System application b
 
 ## Approach and Implementation Details
 
-The system is developed as a custom Frappe application designed to manage core business entities and processes. The primary goal was to create a modular and extensible system leveraging the capabilities of the Frappe framework, including its ORM, UI components, and role-based permissions.
+The system is developed as a custom Frappe application, developing a Company Management System that encompasses various features for managing companies, departments, employees, and projects.
 
 ### Key Modules and Features
 
