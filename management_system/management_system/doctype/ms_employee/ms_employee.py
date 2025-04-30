@@ -15,9 +15,14 @@ class MSEmployee(Document):
 			frappe.throw("Mobile number must start with '0' and be exactly 11 digits long")
 
 	def on_update(self):
-		print("on_update")
+		# Update counts for current company and department
 		self.update_company_count(self.company)
 		self.update_department_count(self.department)
+		
+		# Check if department has changed and update the previous department count
+		old_doc = self.get_doc_before_save()
+		if old_doc and old_doc.department != self.department:
+			self.update_department_count(old_doc.department)
 
 	def after_delete(self):
 		self.update_company_count(self.company)
@@ -30,6 +35,7 @@ class MSEmployee(Document):
 		try:
 			employee_count = frappe.db.count("MS Employee", {"company": company})
 			frappe.db.set_value("MS Company", company, "number_of_employees", employee_count)
+			frappe.db.commit()
 		except Exception as e:
 			frappe.log_error(f"Failed to update company count: {str(e)}", "MS Employee Update Error")
 
@@ -40,6 +46,7 @@ class MSEmployee(Document):
 		try:
 			employee_count = frappe.db.count("MS Employee", {"department": department})
 			frappe.db.set_value("MS Department", department, "number_of_employees", employee_count)
+			frappe.db.commit()
 		except Exception as e:
 			frappe.log_error(f"Failed to update department count: {str(e)}", "MS Employee Update Error")
 

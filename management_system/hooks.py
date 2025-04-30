@@ -23,6 +23,14 @@ app_license = "MIT"
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
+scheduler_events = {
+
+	"daily": [
+		"management_system.scheduled_tasks.employee.calculate_days"
+	]
+
+}
+
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
 
