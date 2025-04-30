@@ -24,9 +24,6 @@ The application is structured around several key DocTypes representing core busi
 *   **Data Aggregation:** Several DocTypes include calculated fields (e.g., `number_of_employees` in MS Company) to provide quick summaries. These are likely updated via Frappe's hooks or custom scripts (further investigation needed for exact mechanism).
 *   **API Access:** The system exposes a RESTful API for interacting with the core DocTypes (Company, Department, Employee, Project). These APIs support fetching lists, retrieving individual records, creating, updating, and deleting records.
 
-"""
-
-"""
 ## Setup and Running the Application
 
 Follow these instructions to set up and run the Management System application locally.
@@ -75,10 +72,6 @@ Follow these instructions to set up and run the Management System application lo
 2.  **Access the application:**
     Open your web browser and navigate to `http://[your-site-name]:8000` (or the appropriate URL/port for your setup).
     Log in using the administrator credentials you set during site creation or other user credentials.
-
-"""
-
-"""
 
 
 ### Assumptions and Considerations
@@ -188,9 +181,7 @@ The application provides RESTful API endpoints for interacting with the core Doc
     *   **Request Body (JSON):** Object containing the `name` (ID) of the project to delete.
     *   **Success Response:** Similar structure to `delete_employee`.
 
-"""
 
-"""
 
 #### License
 
