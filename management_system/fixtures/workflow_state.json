@@ -1,0 +1,56 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-30 18:59:15.622538",
+  "name": "Pending Review",
+  "style": "",
+  "workflow_state_name": "Pending Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-30 18:59:28.083794",
+  "name": "Review Scheduled",
+  "style": "",
+  "workflow_state_name": "Review Scheduled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-30 18:59:41.930866",
+  "name": "Feedback Provided",
+  "style": "",
+  "workflow_state_name": "Feedback Provided"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-30 19:00:02.289589",
+  "name": "Under Approval",
+  "style": "",
+  "workflow_state_name": "Under Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-30 19:00:12.690715",
+  "name": "Review Approved",
+  "style": "",
+  "workflow_state_name": "Review Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2025-04-30 19:00:24.748265",
+  "name": "Review Rejected",
+  "style": "",
+  "workflow_state_name": "Review Rejected"
+ }
+]

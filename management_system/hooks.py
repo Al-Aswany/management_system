@@ -53,6 +53,21 @@ scheduler_events = {
 
 # Generators
 # ----------
+fixtures = [
+    {
+        'dt': 'Workflow',
+        'filters': {
+            'name': ['in', ['Performance Review Process']]
+        }
+    },
+    {
+        'dt': 'Workflow State',
+        'filters': {
+            'name': ['in', ['Pending Review', 'Review Scheduled', 'Feedback Provided', 'Under Approval', 'Review Approved', 'Review Rejected']]
+        }
+    },
+
+]
 
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]

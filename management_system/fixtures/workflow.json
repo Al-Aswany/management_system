@@ -1,0 +1,168 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Performance Review",
+  "is_active": 1,
+  "modified": "2025-04-30 19:33:20.894204",
+  "name": "Performance Review Process",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "System Manager",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Performance Review Process",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Pending Review",
+    "update_field": "status",
+    "update_value": "Pending Review"
+   },
+   {
+    "allow_edit": "Sales Manager",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Performance Review Process",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Review Scheduled",
+    "update_field": "status",
+    "update_value": "Review Scheduled"
+   },
+   {
+    "allow_edit": "Sales Manager",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Performance Review Process",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Feedback Provided",
+    "update_field": "status",
+    "update_value": "Feedback Provided"
+   },
+   {
+    "allow_edit": "Sales Manager",
+    "avoid_status_override": 0,
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Performance Review Process",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Under Approval",
+    "update_field": "status",
+    "update_value": "Under Approval"
+   },
+   {
+    "allow_edit": "Sales Manager",
+    "avoid_status_override": 0,
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Performance Review Process",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Review Approved",
+    "update_field": "status",
+    "update_value": "Review Approved"
+   },
+   {
+    "allow_edit": "Sales Manager",
+    "avoid_status_override": 0,
+    "doc_status": "2",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Performance Review Process",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Review Rejected",
+    "update_field": "status",
+    "update_value": "Review Rejected"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Schedule Review",
+    "allow_self_approval": 1,
+    "allowed": "HR User",
+    "condition": null,
+    "next_state": "Review Scheduled",
+    "parent": "Performance Review Process",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Pending Review"
+   },
+   {
+    "action": "Provide Feedback",
+    "allow_self_approval": 1,
+    "allowed": "HR User",
+    "condition": null,
+    "next_state": "Feedback Provided",
+    "parent": "Performance Review Process",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Review Scheduled"
+   },
+   {
+    "action": "Provide Feedback",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Feedback Provided",
+    "parent": "Performance Review Process",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Review Scheduled"
+   },
+   {
+    "action": "Submit for Approval",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": "doc.feedback\r\n",
+    "next_state": "Under Approval",
+    "parent": "Performance Review Process",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Feedback Provided"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Review Approved",
+    "parent": "Performance Review Process",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Under Approval"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "HR Manager",
+    "condition": null,
+    "next_state": "Review Rejected",
+    "parent": "Performance Review Process",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Under Approval"
+   }
+  ],
+  "workflow_name": "Performance Review Process",
+  "workflow_state_field": "workflow_state"
+ }
+]

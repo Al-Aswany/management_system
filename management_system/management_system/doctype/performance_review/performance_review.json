@@ -30,6 +30,7 @@
    "label": "Review Cycle"
   },
   {
+   "allow_on_submit": 1,
    "default": "Pending Review",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -61,7 +62,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-30 18:55:01.893655",
+ "modified": "2025-05-01 04:34:14.883586",
  "modified_by": "Administrator",
  "module": "Management System",
  "name": "Performance Review",
